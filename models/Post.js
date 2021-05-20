@@ -5,11 +5,14 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    description: String,
+    description: {
+        type: String,
+        required: true
+    },
     date: {
         type: Date,
         default: Date.now
     }
-}) 
+}) ;
 
 module.exports = mongoose.model('Posts', PostSchema);
